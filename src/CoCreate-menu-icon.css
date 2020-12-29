@@ -1,37 +1,84 @@
 /* Menu Toggles */
-.menu_icon--hamburger {
+
+.menu_icon {
   display: block;
-  border-radius: 5px;
-  background-color: transparent;
-  float: left;
-  height: 50px;
-  width: 38px;
-  min-width: 38px;
+  min-width: 30px;
   cursor: pointer;
-  padding: 14px 8px;
-  margin: 0px 6px;
+  margin: 0px 15px;
 
 }
-.menu_icon--hamburger span {
+.menu_icon span {
   position: relative;
   display: block;
   height: 2px;
   width: 100%;
-  margin-top: 4px;
+  margin-top: 6px;
+  margin-bottom: 6px;
   background-color: #000;
   transition: all .25s;
 }	  
-.nav-toggle.open.menu_icon--hamburger span:first-child {
-  transform: rotate(45deg) translate(4.4px, 4.4px);
+.menu_icon.open span:first-child {
+  transform: rotate(45deg) translate(-1px, 6px);
 }
-.nav-toggle.open.menu_icon--hamburger span:nth-child(2) {
-  width: 0%;
-  opacity: 0;
+.menu_icon.open span:nth-child(2) {
+  display:none;
 }
-.nav-toggle.open.menu_icon--hamburger span:last-child {
-  transform: rotate(-45deg) translate(4.4px, -4.4px);
+.menu_icon.open span:last-child {
+  transform: rotate(-45deg) translate(-1px, -6px);
 }
 
+/* Left arrow */
+.menu_icon.arrow-left span:first-child {
+  width:15px;
+}
+.menu_icon.open.arrow-left span:first-child {
+  transform: rotate(-45deg) translate(-5px, 1px);
+  width:12px;
+
+}
+.menu_icon.arrow-left.open span:nth-child(2) {
+  display:block;
+}
+
+.menu_icon.open.arrow-left span:last-child {
+  transform: rotate(45deg) translate(-5px, -1px);
+  width:12px;
+}
+/* Left-right arrow */
+/*.menu_icon .arrow-left span:first-child {*/
+/*  transform: rotate(45deg) translate(12px, -6px);*/
+/*  width:12px;*/
+/*  margin-right:auto;*/
+
+/*}*/
+/*.menu_icon .arrow-left span:last-child {*/
+/*  transform: rotate(-45deg) translate(12px, 6px);*/
+/*  width:12px;*/
+/*  margin-right: auto;*/
+/*}*/
+
+
+/* right arrow */
+.menu_icon.arrow-right span:first-child {
+  width:15px; 
+  margin-left:auto;
+}
+.menu_icon.arrow-right.open span:first-child {
+  transform: rotate(45deg) translate(14px, -8px);
+  width:12px;
+  margin-left: unset;
+  margin-right:auto;
+}
+.menu_icon.arrow-right.open span:nth-child(2) {
+  display:block;
+}
+.menu_icon.arrow-right.open span:last-child {
+  transform: rotate(-45deg) translate(14px, 8px);
+  width:12px;
+  margin-right: auto;
+}
+
+/* dots to X */
 .circle {
   width: 4px;
   height: 4px;
@@ -60,10 +107,10 @@
 .menu_icon--Vdots .circle:nth-child(5) {
   left: 16px;
 }
-.nav-toggle.open.menu_icon--Vdots {
+.menu_icon--Vdots.open {
   transform: rotate(45deg);
 }
-.nav-toggle.open.menu_icon--Vdots .circle, .menu_icon--Vdots:focus .circle {
+.menu_icon--Vdots.open .circle, .menu_icon--Vdots:focus .circle {
   opacity: 1;
 }
 /* Menu Toggles End */
